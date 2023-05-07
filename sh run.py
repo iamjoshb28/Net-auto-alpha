@@ -1,6 +1,6 @@
 from netmiko import ConnectHandler
 # ip_list = ['192.168.1.200','192.168.1.212']
-File = open("New_File22.txt", "w") # Declares File variable to written to later
+File = open("Run_Output.txt", "w") # Declares File variable to written to later
 
 ip_list = [ip.strip() for ip in open("IPS.txt", 'r')] # Reads data from .txt file line by line and adds to list
 
@@ -8,8 +8,8 @@ for ip in ip_list: # for loop that runs for each ip in list
     cisco_01 = { # privledged connection info for netmiko
         "device_type": "cisco_ios",
         "host": (ip),
-        "username": "cool",
-        "password": "guy",
+        "username": "admin",
+        "password": "root",
         "secret": "love"  # Enable password
     }
 
