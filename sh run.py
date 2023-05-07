@@ -5,7 +5,7 @@ File = open("Run_Output.txt", "w") # Declares File variable to written to later
 ip_list = [ip.strip() for ip in open("IPS.txt", 'r')] # Reads data from .txt file line by line and adds to list
 
 for ip in ip_list: # for loop that runs for each ip in list
-    cisco_01 = { # privledged connection info for netmiko
+    cisco_01 = { # privileged connection info for netmiko
         "device_type": "cisco_ios",
         "host": (ip),
         "username": "admin",
