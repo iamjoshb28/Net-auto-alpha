@@ -1,5 +1,5 @@
 from netmiko import ConnectHandler
-# ip_list = ['192.168.1.200','192.168.1.212']
+# ip_list = ['192.168.1.200','192.168.1.212'] # OLD
 File = open("Run_Output.txt", "w") # Declares File variable to written to later
 
 ip_list = [ip.strip() for ip in open("IPS.txt", 'r')] # Reads data from .txt file line by line and adds to list
