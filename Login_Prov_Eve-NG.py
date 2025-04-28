@@ -57,12 +57,12 @@ def create_instance(instance_name):
 
 def telnet_init(telnet_port):
     TELNET_TIMEOUT = 10
-    tn = Telnet(host=192.168.138.133,port=telnet_port,timeout=TELNET_TIMEOUT)
+    tn = Telnet(host='192.168.138.133',port=telnet_port,timeout=TELNET_TIMEOUT)
 
 
 def device_conf(device_name,telnet_port):
     TELNET_TIMEOUT = 10
-    tn = Telnet(host=192.168.138.133,port=telnet_port,timeout=TELNET_TIMEOUT)
+    tn = Telnet(host='192.168.138.133',port=telnet_port,timeout=TELNET_TIMEOUT)
     with open(f"{device_name}.conf", 'r') as cmd_file:
         for cmd in cmd_file.readlines():
             cmd = cmd.strip('\r\n')
